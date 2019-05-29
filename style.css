@@ -6,7 +6,7 @@
 body {
 	background-image: url(back.jpg);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background: cover;
 	font-family: Arial, sans-serif;
 }
 h1 {
@@ -77,8 +77,11 @@ h1 {
 	width: 246px;
 	margin: 0px 0px;
 	padding: 0px;
+	opacity: 0.5;
 	border: 2px solid #fff;
 }
 .slider-thumbs img:hover, .slider-thumbs img.thumbSelect {
 	border: 2px solid #0f0;
+	cursor: pointer;
+	opacity: 1;
 }
