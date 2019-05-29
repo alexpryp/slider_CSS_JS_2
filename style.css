@@ -15,12 +15,15 @@ h1 {
 	color: #fff;
 	font-weight: bold;
 }
+.slider-wrapper {
+		width: 1060px;
+		margin: 50px auto;
+}
 .slider {
 	position: relative;
 	width: 1060px;
 	padding: 0 30px;
-	//border: 1px solid #ccc;
-	margin: 50px auto;
+	margin: 0;
 }
 .slider img {
 	width: 1000px;
@@ -64,4 +67,18 @@ h1 {
 }
 .gallery li {
 	display: inline-block;
+}
+.slider-thumbs {
+	width: 1000px;
+	margin: 5px auto;
+}
+
+.slider-thumbs img {
+	width: 246px;
+	margin: 0px 0px;
+	padding: 0px;
+	border: 2px solid #fff;
+}
+.slider-thumbs img:hover, .slider-thumbs img.thumbSelect {
+	border: 2px solid #0f0;
 }

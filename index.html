@@ -6,17 +6,25 @@
 </head>
 <body>
 	<h1>Slider with HTML, CSS, JavaScript</h1>
-	<div class="slider">
-		<button class="arrow prev"><</button>
-		<div class="gallery">
-			<ul class="images">
-				<li><img src="1.jpg" alt="lake"></li>
-				<li><img src="2.jpg" alt="beach"></li>
-				<li><img src="3.jpg" alt="ocean"></li>
-				<li><img src="4.jpg" alt="island"></li>
-			</ul>
+	<div class="slider-wrapper">
+		<div class="slider">
+			<button class="arrow prev"><</button>
+			<div class="gallery">
+				<ul class="images">
+					<li><img src="1.jpg" alt="lake"></li>
+					<li><img src="2.jpg" alt="beach"></li>
+					<li><img src="3.jpg" alt="ocean"></li>
+					<li><img src="4.jpg" alt="island"></li>
+				</ul>
+			</div>
+			<button class="arrow next">></button>
 		</div>
-		<button class="arrow next">></button>
+		<div class="slider-thumbs">
+			<img src="1.jpg" data-number="1" alt="image">
+			<img src="2.jpg" data-number="2" alt="image">
+			<img src="3.jpg" data-number="3" alt="image">
+			<img src="4.jpg" data-number="4" alt="image">
+		</div>
 	</div>
 
 	<link rel="stylesheet" type="text/css" href ="style.css">

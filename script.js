@@ -7,6 +7,9 @@ let width = 1000;
 let slider = document.querySelector(".slider");
 let list = slider.querySelector("ul");
 let listElems = slider.querySelectorAll("li");
+let timerId = null;
+let thumbs = document.querySelector(".slider-thumbs");
+let selectThumb = null;
 
 let position = 0;
 
@@ -20,9 +23,9 @@ function forward () {
 	list.style.marginLeft = position + "px";	
 }
 
-slider.querySelector('.prev').onclick = back;
+slider.querySelector('.prev').addEventListener("click", back);
 
-slider.querySelector('.next').onclick = forward;
+slider.querySelector('.next').addEventListener("click", forward);
 
 function autoSlide () {
 	if (position > -3000) {
@@ -33,4 +36,30 @@ function autoSlide () {
 	}
 }
 
-let timerId = setInterval(autoSlide, 5000);
+timerId = setInterval(autoSlide, 5000);
+
+let slides = {
+	"1": 0,
+	"2": 1000,
+	"3": 2000,
+	"4": 3000
+}
+
+function showLargeImg(event) {
+	let target = event.target;
+
+	while (target != this) {
+		if(target.nodeName == "IMG") {
+			if(selectThumb) {
+				selectThumb.classList.remove("thumbSelect");
+			}
+			
+			selectThumb = target;
+			target.classList.add("thumbSelect");
+			list.style.marginLeft = -slides[target.getAttribute('data-number')] + "px";
+		}
+		target = target.parentNode;
+	}
+}
+
+thumbs.addEventListener("click", showLargeImg);
