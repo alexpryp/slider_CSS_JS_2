@@ -6,7 +6,7 @@
 body {
 	background-image: url(back.jpg);
 	background-repeat: no-repeat;
-	background: cover;
+	background-size: cover;
 	font-family: Arial, sans-serif;
 }
 h1 {

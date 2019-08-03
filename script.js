@@ -37,12 +37,14 @@ function highlight(position) {
 	elem.classList.add("thumbSelect")
 }
 
+//switch slides to the left
 function back () {
 	position = Math.min(position + width, 0);
 	highlight(position);
 	list.style.marginLeft = position + "px";
 }
 
+//switch slides to the right
 function forward () {
 	position = Math.max(position - width, -width * (listElems.length - 1));
 	highlight(position);
@@ -52,6 +54,7 @@ function forward () {
 slider.querySelector('.prev').addEventListener("click", back);
 slider.querySelector('.next').addEventListener("click", forward);
 
+//automatic scrolling through slides
 function autoSlide () {
 	if (position > -3000) {
 		forward();
@@ -64,6 +67,7 @@ function autoSlide () {
 
 timerId = setInterval(autoSlide, 5000);
 
+//slide show that matches the selected thumbnail
 function showLargeImg(event) {
 	let target = event.target;
 
